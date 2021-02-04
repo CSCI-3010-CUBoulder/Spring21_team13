@@ -77,7 +77,13 @@ std::vector<bool> GreaterMask(std::vector<int> nums, int greater_than);
 std::vector<bool> LessMask(std::vector<int> nums, int less_than);
 
 // Sums all numbers in a vector and returns the resulting value
-double Sum(std::vector<double> nums);
+double Sum(std::vector<double> nums){
+    int sum = 0;
+    for(int i = 0; i < nums.size(),i++){
+        sum += nums[i];
+    }
+    return sum;
+}
 
 // Multiplies all numbers in a vector together and returns the resulting value
 double Product(std::vector<double> nums);
@@ -93,7 +99,12 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 std::vector<double> Multiples(double n, double m);
 
 // returns -1 if the number is negative and 1 if positive
-double Sign(double num);
+double Sign(double num){
+    if(num > 0) 
+        return 1;
+    else if(num < 0)
+        return -1;
+};
 
 
 // adds n to each element of the vector
