@@ -1,6 +1,4 @@
 /* String functions section */
-#include <vector>
-#include <string>
 
 // Splits a single string on separator into a vector of strings
 std::vector<std::string> Split(std::string whole, std::string separator);
@@ -79,12 +77,11 @@ std::vector<bool> GreaterMask(std::vector<int> nums, int greater_than);
 std::vector<bool> LessMask(std::vector<int> nums, int less_than);
 
 // Sums all numbers in a vector and returns the resulting value
-double Sum(std::vector<double> nums) {
-    double sum = 0;
-    for(int i = 0; i < nums.size(); i++) {
+double Sum(std::vector<double> nums){
+    int sum = 0;
+    for(int i = 0; i < nums.size(),i++){
         sum += nums[i];
     }
-
     return sum;
 }
 
@@ -102,10 +99,13 @@ std::vector<double> VectorTimesN(std::vector<double> v, double n);
 std::vector<double> Multiples(double n, double m);
 
 // returns -1 if the number is negative and 1 if positive
-double Sign(double num) {
-    if(num < 0) { return -1;}
-    else { return 1;};
-}
+double Sign(double num){
+    if(num > 0) 
+        return 1;
+    else if(num < 0)
+        return -1;
+};
+
 
 // adds n to each element of the vector
 std::vector<int> AddN(std::vector<int>, int n);
@@ -122,3 +122,8 @@ std::vector<int> SubtractN(std::vector<int>, int n);
 
 // subtracts n to each element of the vector
 std::vector<double> SubtractN(std::vector<double>, double n);
+
+
+int main(){
+    
+}
